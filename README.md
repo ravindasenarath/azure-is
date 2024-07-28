@@ -31,3 +31,47 @@
  - declarative syntax - Syntax that lets you state "Here is what I intend to create" without having to write the sequence of programming commands to create it. The Resource Manager template is an example of declarative syntax. In the file, you define the properties for the infrastructure to deploy to Azure.
 
 ## Create resource groups
+
+ - Can deploy to any new or existing resource group
+ - Deployment to a resource group becomes a job where template execution can be tracked
+ - If deployment fails output of the job describe why
+ - Deployments are incremental
+
+### Rules for resource groups
+ - Resources can only exist in one resource group ( cannot be shrared between groups )
+ - Resource groups cannot be named
+ - Resource groups can have resources of many different types
+ - Resource groups can have resources from different regions
+
+### Creating resource groups
+ - All resources in group should share same life cycle
+ - Can move resources between groups but limitations apply
+ - Resourse groups can be used to scope acess control for administrative actions
+ - Resources can interact with resources in other resource groups
+ - Need to provide a location
+
+### Create Azure Resource Manager locks
+
+ - Allow organizations to put a structure in place that prevents the accidental deletion of the resources
+ - Can associaete with a subscription/resource group or resource
+ - Locks are inherited by child resources
+ - Only the owner and User Access Administrator roles can create/delete management locks
+ - Lock types
+  - Read-Only locks - No changes can be done
+  - Delete locks - Prevent deletion 
+
+### Reorganize Azure resources
+
+- When moving resources both source and target groups are locked during the operation
+- Write and delete operations are locked ( can't add, update or delete )
+
+## Remove resources and resource groups
+
+- Powershell, use `Remove-AzResourceGroup` command ( eg `Remove-AzResourceGroup -Name "RES001"` )
+
+## Determine resource limits
+
+ - The limits shown are the limits for your subscription.
+ - When you need to increase a default limit, there is a Request Increase link.
+ - All resources have a maximum limit listed in Azure limits.
+ - If you are at the maximum limit, the limit can't be increased.
