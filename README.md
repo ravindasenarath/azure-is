@@ -65,13 +65,45 @@
 - When moving resources both source and target groups are locked during the operation
 - Write and delete operations are locked ( can't add, update or delete )
 
-## Remove resources and resource groups
+### Remove resources and resource groups
 
 - Powershell, use `Remove-AzResourceGroup` command ( eg `Remove-AzResourceGroup -Name "RES001"` )
 
-## Determine resource limits
+### Determine resource limits
 
  - The limits shown are the limits for your subscription.
  - When you need to increase a default limit, there is a Request Increase link.
  - All resources have a maximum limit listed in Azure limits.
  - If you are at the maximum limit, the limit can't be increased.
+
+## Introduction to Azure Cloud Shell
+
+ - Browser associate cloud shell
+ - Bash / Powershell
+ - Double encryption at rest by default
+ - Cloud storage for ssh keys, sripts etc
+
+### When should you use Azure Cloud Shell?
+
+Shouldn't use Azure Cloud Shell if
+ - Long running scripts ( more 20 min )
+ - Need admin permission
+ - Install tools that aren't supported
+ - Need storage from different regions
+ - Open multiple instances at once
+
+### Powershell
+
+Share from traditional command line
+
+ - Buit in help system
+ - Pipeline
+ - Aliases
+
+Differs
+
+ - Operates on objectsover text
+ - Has cmdlets, takes objects and return objects. Core cmdlets built in .NET Core
+ - Has many types of commands - native executables, cmdlets, functions, scripts or aliases
+ - cmdlet -> [Verb]-[Noun]
+ - Search with `Get-Command -Nount alias*` or `Get-Command -Verb Get -Noun alias*`
