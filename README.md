@@ -107,3 +107,17 @@ Differs
  - Has many types of commands - native executables, cmdlets, functions, scripts or aliases
  - cmdlet -> [Verb]-[Noun]
  - Search with `Get-Command -Nount alias*` or `Get-Command -Verb Get -Noun alias*`
+
+## Configure resources with Azure Resource Manager templates
+
+### Review Azure Resource Manager template advantages
+
+`Azure Resource Manager template` precisely defines all the Resource Manager resources in a deployment.
+
+ - Templates improve consistency : Resource Manager templates provide a common language for you and others to describe your deployments.
+ - Templates help express complex deployments : Templates enable you to deploy multiple resources in the correct order
+ - Templates reduce manual, error-prone tasks : Manually creating and connecting resources can be time consuming, and it's easy to make mistakes.
+ - Templates are code : can be shared, tested, and versioned similar to any other piece of software
+ - Templates promote reuse : Template can contain parameters that are filled in when the template runs
+ - Templates are linkable : You can link Resource Manager templates together to make the templates themselves modular.
+ - Templates simplify orchestration : You only need to deploy the template to deploy all of your resources.
