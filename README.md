@@ -121,3 +121,74 @@ Differs
  - Templates promote reuse : Template can contain parameters that are filled in when the template runs
  - Templates are linkable : You can link Resource Manager templates together to make the templates themselves modular.
  - Templates simplify orchestration : You only need to deploy the template to deploy all of your resources.
+
+### Azure Resource Manager template schema
+
+```
+{
+    "$schema": "http://schema.management.​azure.com/schemas/2019-04-01/deploymentTemplate.json#",​
+    "contentVersion": "",​
+    "parameters": {},​
+    "variables": {},​
+    "functions": [],​
+    "resources": [],​
+    "outputs": {}​
+}
+```
+ - schema : Location of the schema
+ - contentVersion : Version of the template
+ - parameters : Values for deployment to customize
+ - variables : Values that are used as JSON framgments in the template to simplify templatelanguage expressoins
+ - functoins : User defiend functions that are available in the template
+ - resources : Resource types that are deployed or updated in a resource group
+ - output : Values that are returned
+
+### Azure Resource Manager template parameters
+
+```
+"parameters": {
+    "<parameter-name>" : {
+        "type" : "<type-of-parameter-value>",
+        "defaultValue": "<default-value-of-parameter>",
+        "allowedValues": [ "<array-of-allowed-values>" ],
+        "minValue": <minimum-value-for-int>,
+        "maxValue": <maximum-value-for-int>,
+        "minLength": <minimum-length-for-string-or-array>,
+        "maxLength": <maximum-length-for-string-or-array-parameters>,
+        "metadata": {
+        "description": "<description-of-the parameter>"
+        }
+    }
+}
+```
+example
+```
+"parameters": {
+  "adminUsername": {
+    "type": "string",
+    "metadata": {
+      "description": "Username for the Virtual Machine."
+    }
+  },
+  "adminPassword": {
+    "type": "securestring",
+    "metadata": {
+      "description": "Password for the Virtual Machine."
+    }
+  }
+}
+```
+
+### Bicep templates
+
+Azure Bicep is a domain-specific language (DSL) that uses declarative syntax to deploy Azure resources. It provides concise syntax, reliable type safety, and support for code reuse.
+
+![How Bicep works](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-resources-arm-templates/media/bicep.png)
+
+ - Simpler syntax: Bicep provides a simpler syntax for writing templates.
+ - Modules: You can break down complex template deployments into smaller module files 
+ - Automatic dependency management: In most situations, Bicep automatically detects dependencies between your resources.
+ - Type validation and IntelliSense: The Bicep extension for Visual Studio Code features rich validation and IntelliSense for all Azure resource type API definitions.
+
+
+
