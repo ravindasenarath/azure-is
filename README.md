@@ -193,23 +193,23 @@ Azure Bicep is a domain-specific language (DSL) that uses declarative syntax to 
 
 ## Core Architectural components of Azure
 
-## Regions, region pairs, sovereign regions
+### Regions, region pairs, sovereign regions
  - Regions : Geographical area on the planet that contains at least one datacenters that are connected via low-latency network
  - Region pairs : Most regions are pairs with another region within the same geography. ( West India and Brazil South paired in only one direction )
  - Soverieign regions : Isolated from the main instance of Azure.( Compliance or legal purposes )
-## Availability Zones
+### Availability Zones
  - Physically sepearte datacenters within a region
  - Categories
    - Zonal services : Pin the resource to a specific zone
    - Zone reduntant service : Platform replicate automatically across zones
    - Non-regional services : Available from Azure geographies 
-## Azure datacenters
-## Azure resources and Resource Groups
+### Azure datacenters
+### Azure resources and Resource Groups
  - Resource : Building block of Azure (  Anything create, provisoin, deploy etc )
  - Resource Groups : Grouping of resources
    - Resource available in one group at a time
    - Groups's cannot be nested
-## Subscriptions
+### Subscriptions
  - Unit of management, billing and scale
  - Logically organize resource groups and facilitate billing
  - Subscription links to an azure account
@@ -219,10 +219,26 @@ Azure Bicep is a domain-specific language (DSL) that uses declarative syntax to 
  - Types of subscriptions
    - Billing boundary : To determine how an account is billed
    - Access control boundary : To reflect different organizational structures ( eg different departments )
-## Management groups
+### Management groups
  - Level of scope above subscriptions
  - Subscriptions within management group inherit settings from the group
-## Hierarchy of resource groups, subscriptions, management groups
+
+## Azure compute and networking services
+
+### Virtual Machines
+ - Total control over the OS
+ - Ability to run custom software
+ - Custom hosting configurations
+### Virtual Machine Scale sets
+ - Create and manage a group of identical load-balanced VMs
+### Virtual Machine availability sets
+ - Ensure VM's stagger updates and have varied power and network preventing losing VM's with network or power failure
+
+- Update domain - Apply updates while knowing only one update domain grouping is offline at a time
+- Fault domain - Group VMs by common power source and network switch.  Default slipt VMs across three fault domains.
+
+### Azure Containers
+
 
 
 
