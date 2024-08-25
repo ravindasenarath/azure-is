@@ -191,4 +191,38 @@ Azure Bicep is a domain-specific language (DSL) that uses declarative syntax to 
  - Type validation and IntelliSense: The Bicep extension for Visual Studio Code features rich validation and IntelliSense for all Azure resource type API definitions.
 
 
+## Core Architectural components of Azure
+
+## Regions, region pairs, sovereign regions
+ - Regions : Geographical area on the planet that contains at least one datacenters that are connected via low-latency network
+ - Region pairs : Most regions are pairs with another region within the same geography. ( West India and Brazil South paired in only one direction )
+ - Soverieign regions : Isolated from the main instance of Azure.( Compliance or legal purposes )
+## Availability Zones
+ - Physically sepearte datacenters within a region
+ - Categories
+   - Zonal services : Pin the resource to a specific zone
+   - Zone reduntant service : Platform replicate automatically across zones
+   - Non-regional services : Available from Azure geographies 
+## Azure datacenters
+## Azure resources and Resource Groups
+ - Resource : Building block of Azure (  Anything create, provisoin, deploy etc )
+ - Resource Groups : Grouping of resources
+   - Resource available in one group at a time
+   - Groups's cannot be nested
+## Subscriptions
+ - Unit of management, billing and scale
+ - Logically organize resource groups and facilitate billing
+ - Subscription links to an azure account
+ - Account can have multiple subscriptions but only need one
+ - Can use to define boundaries around azure products
+ - Access management applies at subscription level
+ - Types of subscriptions
+   - Billing boundary : To determine how an account is billed
+   - Access control boundary : To reflect different organizational structures ( eg different departments )
+## Management groups
+ - Level of scope above subscriptions
+ - Subscriptions within management group inherit settings from the group
+## Hierarchy of resource groups, subscriptions, management groups
+
+
 
