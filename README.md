@@ -239,6 +239,41 @@ Azure Bicep is a domain-specific language (DSL) that uses declarative syntax to 
 
 ### Azure Containers
 
+ - Virtualization environments
+ - Lightweight and designed to scale
+ - Azure container instances : PaaS service
+ - Azure container Apps : Similar to container instances + ability to incorporate load balancing and scaling
+ - AKS(Azure Kubernetes Service) : Manged Kubernetes service
 
+### Azure functions
 
+ - Event driven serverless compute option
+ - Even driven, short ( within seconds or less )
+ - Charged for CPU time
+ - Can be stateful(Durable Functions) or stateless
+
+### App hosting options: Azure App Service
+
+ - webapps, mobile back-ends, RESTful API's
+ - Automatic scaling and high availability
+ - Linux / Windows
+ - Automated deployment from GitHub, Azure DevOps
+ - Support .NET, .NET core, Java, Ruby, Node.js, PHO or Python
+ - Handles infrastructure decisions in hosting web accessible apps
+   - Deployment and management
+   - Endpoints can be secured
+   - Scale with traffic
+   - Built in load balancing and traffic manager provide high availbility
+  
+  ### Asure virtual networking
+
+ - Isolation and segmentation
+ - Internet communication
+ - Communicate between azure resources
+ - Communicate with on prem resources
+ - Route netowrk traffic
+ - Filter network traffic
+ - Connect Virtual networks
+
+ - 
 
