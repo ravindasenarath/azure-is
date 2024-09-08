@@ -267,13 +267,22 @@ Azure Bicep is a domain-specific language (DSL) that uses declarative syntax to 
   
   ### Asure virtual networking
 
- - Isolation and segmentation
- - Internet communication
+ - Isolation and segmentation : Created isolated virtual networks. Allocate parts of ip addresses to subnet
+ - Internet communication : Assign a public IP to azure resource or put resource behind a load balancer
  - Communicate between azure resources
+    - Virtual networks can connect to other resources
+    - Service endpoints can connect to other azure resource types 
  - Communicate with on prem resources
+    - Point-to-point : Coputer outside org back into corporate network
+    - Site-to-site : Link on-prem VPN device or gateway to Azure VPN gateway in virtual network.
+    - Azure ExpreseRoute : Dedicated private connectivity(Not over internet)
  - Route netowrk traffic
+    - Route tables : Define rules
+    - Border Gateway Protocol(BGP) : Works with Azure VPN gateways, Azure Route Server or ExpressRoute go connect on prem to Azure virtual network 
  - Filter network traffic
+    - Network security gruops : Mange inbound/outbound rules
+    - Network virtual appliances : Specialized VMs with hardened network appliance.
  - Connect Virtual networks
-
- - 
+ 
+ Virtual network peering: connect two network VN's, Use Azure intranet. Use defined routes(UDR) allow to control routing tables between routes.
 
