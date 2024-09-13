@@ -286,3 +286,15 @@ Azure Bicep is a domain-specific language (DSL) that uses declarative syntax to 
  
  Virtual network peering: connect two network VN's, Use Azure intranet. Use defined routes(UDR) allow to control routing tables between routes.
 
+## VPN
+
+  - Use an encrypted tunnel
+  - Connect two or more trusted networks over untrusted network
+  - Traffic is encrypted
+
+### VPN Gateways
+
+Deployed in dedicated subnet of the virtual network end enable
+
+ - Connect on-prem datacenters to virtual networks through a site-to-site
+
