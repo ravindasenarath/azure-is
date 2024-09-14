@@ -296,5 +296,32 @@ Azure Bicep is a domain-specific language (DSL) that uses declarative syntax to 
 
 Deployed in dedicated subnet of the virtual network end enable
 
- - Connect on-prem datacenters to virtual networks through a site-to-site
+ - Connect on-prem datacenters to virtual networks through a site-to-site connection
+ - Connect individual devices to virtual networks through a point-to-point connection
+ - Connect virtual networks to other virtual networks
+
+Features of VPN gateway
+
+ - Data transfer is encerypted in a private tunnel
+ - Only one gateway per virtual network
+ - One gateway can connect to multiple locations
+
+Types of VPN Gateway
+
+ - Policy based VPN - Sepcify statically the IP address of packets that should be encrypted
+ - Route based VPN - IP sec tunnels are modeled as a network interface or virtual tunnel. Decide which tunnel to use for each packet. Preferred connection method for on-prem devices. More resilient to topology changes.
+
+Use Route based VPN gateway for
+
+ - COnnections between VNs
+ - Point to point connections
+ - Multisite connections
+ - Coesistence with Azure ExpreeRoute gateway
+
+High available scenarios
+
+ - Active/standby : Two connections, one stand by which activate on disruption. Connections are interrupted during the failover(few seconds for planned and within 90 for unplanned disruptions)
+ - Actuve/active : High availability
+ - ExpressRoute failover : Configure a VPn gateway as a secure failover path for ExpressRoute connecitons
+ - Zone -redundant gateways : Deploy VPN gateways and ExpressROute gateways in  a zero redundant configuration. 
 
