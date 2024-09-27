@@ -325,3 +325,36 @@ High available scenarios
  - ExpressRoute failover : Configure a VPn gateway as a secure failover path for ExpressRoute connecitons
  - Zone -redundant gateways : Deploy VPN gateways and ExpressROute gateways in  a zero redundant configuration. 
 
+### Azure ExpressRoute
+
+ - Extend on-prem network to MS cloud via a private connection
+ - Connection called "Express circuit"
+
+Features and benefits using ExpressRoute between Azure and on-prem
+
+ - Connectivity to MS cloud services across all regions in the geopolitical region
+ - Global connectivity to MS services across all regions wih the ExpressRoute Global Reach
+ - Dynamic routing between your network and MS via BOrder Gateway Protocol(BGP)
+
+ExpressRoute enables direct access to the following services in all regions
+
+ - MS Office 365
+ - MS Dynamics 365
+ - Azure compute services
+ - Azure cloud services
+
+Global connectivity - ExpressRoute Global Reach to exchange data across on-prem sites by connecting ExpressRoute circuits
+Dynamic routing - GGP protocol is used.
+Built in redundency - Can use multiple circuits
+
+ExpressRoute connectivity models
+
+ - CloudExchange colocation -
+ - Point-to-point Ethernet connection -
+ - Any-toany connection -
+ - Directly from ExressRoute sites - Connect directly into MS global network at a peering location. Express route Direct provides 100 Gbps or 10 Gbps connectivity with Active/Active support
+
+Security
+
+ - Doesn't travel over the public internet
+ - 
