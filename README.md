@@ -354,7 +354,13 @@ ExpressRoute connectivity models
  - Any-toany connection -
  - Directly from ExressRoute sites - Connect directly into MS global network at a peering location. Express route Direct provides 100 Gbps or 10 Gbps connectivity with Active/Active support
 
-Security
+### Azure DNS
 
- - Doesn't travel over the public internet
- - 
+ - Reliability and performance : Hosted on Azure's global network of DNS name servers, use anycast for performance
+ - Security : Based on Azure resource manager
+   - Azure role-based access control(Azure RBAC) to control who as access to specific actions for organisation
+   - Activity logs to monitor how a user in organisation modified a resource or find errors when troubleshooting
+   - Resource locking to lock subscription, resource group, or resource. Locking prevent accidental deleting or modifying critical resources
+ - Easy to Use : Integrated in Azure portal and use same credentials, support contact and billing as azure services.
+ - Customize virtual networks : Support private DNS domains. Allow to use your own domain names in private virtual networks, rather than stuck with azure provided names.
+ - Alias records : Can use to refer to Azure resoruce. If IP address of underlying resource change. Alias points to service instance, service instance associate with and IP address
