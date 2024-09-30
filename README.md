@@ -364,3 +364,6 @@ ExpressRoute connectivity models
  - Easy to Use : Integrated in Azure portal and use same credentials, support contact and billing as azure services.
  - Customize virtual networks : Support private DNS domains. Allow to use your own domain names in private virtual networks, rather than stuck with azure provided names.
  - Alias records : Can use to refer to Azure resoruce. If IP address of underlying resource change. Alias points to service instance, service instance associate with and IP address
+
+## AZ-104: Manage identities and governance in Azure
+
