@@ -367,3 +367,28 @@ ExpressRoute connectivity models
 
 ## AZ-104: Manage identities and governance in Azure
 
+### MS Entra ID
+
+ - Part of the PaaS offerin and operates as a Microsoft managed directory service in cloud
+ - Not part of the core infrastructure that customer own and manage
+ - Less control
+ - Get access to Multi-factor authenticatoin, identify protection and self service password reset
+
+Usages of Entra ID
+
+ - Configure access to applications
+ - Configure SSO to cloud based SaaS apps
+ - Manage user groups
+ - Provisioning users
+ - Enabling federation between organisations
+ - Provideing an identify management solution
+ - Identify irregular sign-in activities
+ - Multi factor auth
+ - Extend onprem AD implementation to Entra ID
+ - Configure application proxy for cloud and local apps
+ - Configure conditional access for users and devices
+
+Entra Tenants
+
+ - At any given moment, Azure subscription must be associated with one and only one Entra tenant(Can associate with multiple)
+ - Each entra tenant assigned a default DNS derived from the name of the MS account used to create and Azure subscription followed by **onmicrosoft.com**
