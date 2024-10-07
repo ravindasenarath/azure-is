@@ -392,3 +392,49 @@ Entra Tenants
 
  - At any given moment, Azure subscription must be associated with one and only one Entra tenant(Can associate with multiple)
  - Each entra tenant assigned a default DNS derived from the name of the MS account used to create and Azure subscription followed by **onmicrosoft.com**
+
+Entra Schema
+
+ - Fewer object types
+ - No definition of computer class
+ - Can't use with Group Policy Objects(GPOs)
+ - Doesn't include organisational unit(OU) class, so can't arrange into a hierarchy of custom containers. Can use organizing objects based on their group membership.
+ - Objects of the application and servicePrinciple represent applications in Entra ID
+ - Object in application class -> application definision, object in service principle -> constitues its instance in the current entra tenant
+
+### Confiure user and group accounts
+
+Account types
+
+ - Cloud identity - Defined only in Entra ID. Includes administrator and users.
+ - Directory synchronized Identity - Defined in on prem AD and synced to cloud via Entra connect. Source for accounts is Windows Server AD.
+ - Guest user - Defined outside Azure. ( eg other cloud providers )
+
+Things to consider
+
+ - User profile data - Allow user to set profile info
+ - Restore options for deleted accounts - Restore within a period
+ - Gathered account data - Audit purpose
+ - Consider naming conventions
+ - Consider using initial passwords - Design an initial password and a way to communicate it securely
+
+Group accounts
+
+ - Security groups - Manage member and computer access to shared resources
+ - MS 365 groups - Provide collaboration opportunities
+
+Things to consider when add member to a group
+
+ - Assigned - Each user have unique permissions
+ - Dynamic user - To automatically add and remove group members
+ - Dynamic device - To automatically add and remove devices in secruity groups
+
+Administrative Units
+
+Restrict administrator scope when organisation has independent divisions
+
+Things to consider
+
+ - Consider management tools
+ - Consider role requirments in the Azure portal
+ - Consider scope of administrative units
