@@ -438,3 +438,37 @@ Things to consider
  - Consider management tools
  - Consider role requirments in the Azure portal
  - Consider scope of administrative units
+
+### Configuring subscriptions
+
+ - An Azure subscription is a logical unit of Azure services that linked to an Azure account.
+ - Azure account is an identity in MS Entra ID or a directory trusted by MS Entra ID such as a work or school account
+
+![Azure Subscription](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-subscriptions/media/azure-subscriptions-e855533e.png)
+
+ - Each subscription can have a different billing and payment configuration
+ - Multiple subscription can be linked to same Azure account
+ - Multiple Azure accounts can be linked to same subscription
+
+Ways to obtain Azure subscription
+
+ - Enterprise agreement
+ - Microsoft reseller
+ - Microsoft Partner
+ - Personal free account
+
+MS Cost Management
+
+ - Shows organisational cost and usage patterns
+ - Reports with usage based cost, internal and external costs. Help find spending anomalies
+ - Use Azure management groups, budgets and recommendations to reduce costs
+ - Can export or consume via API's
+
+Cost Savings
+
+ - Reservations - Pay ahead provide a billing discount
+ - Azure Hybrid Benefits - Maximize the value of existing on prem Windows Server or SQL Server
+ - Azure Credits - Monthly credit benefits
+ - Azure regions - Pricing vary from one region to another
+ - Budgets - Apply budgeting features
+ - Price Calculator
