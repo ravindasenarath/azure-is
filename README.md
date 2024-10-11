@@ -472,3 +472,35 @@ Cost Savings
  - Azure regions - Pricing vary from one region to another
  - Budgets - Apply budgeting features
  - Price Calculator
+
+### Configure Azure Policy
+
+ - Service to create, assign, manage policies to control audit resources
+ - Enforce rules over resource configurations so they stay compliant
+
+Management groups
+
+ - Provide a level of scope and control above subscriptions
+ - containers to manage access, policy and compliance across subscriptions
+ - By default all subscriptions are placed under the top-level management group or root group
+ - All subscriptions within a management group inherit conditions from the group
+ - Management group tree can support upto six levels of depth
+ - Role based access control authorization for management group operations isn't enabled by default
+
+![Management groups](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-azure-policy/media/management-groups-aa92c04a.png)
+
+Implement Azure policies
+
+ - Enforce rules and complience - Built-in policies or build custom policies. Support real-time policy evaluation and enforcement and periodic or on demand complience evaluation
+ - Apply poicies at scale - Apply across organisation. Apply multiple policies and aggregate policy states with policy initiative. Define exclusion scope.
+ - Perform remediation - Conduct real-time remediation
+ - Exercise governance - Implement governance tasks
+
+Create azure policies
+
+![Steps to create policy definisions](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-azure-policy/media/implement-azure-policy-b4a4a47c.png)
+
+ 1. Create policy definitions - Condition to evaluate and the actions to perform when met.Can create or choose from built in. 
+ 2. Create an initiative definition - Set of policy definitions that help you track resources complience state.Can create or choose from built in. 
+ 3. Scope the initiative definition - How initiative definitions are applied to resources. Can limit the scope of an initiative definition of specific management group, suscription or resource group
+ 4. Determine compliance - Can evaluate the state of resources. 
