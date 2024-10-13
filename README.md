@@ -507,7 +507,34 @@ Create azure policies
 
 ## AZ-104 : Configure and manage virtual networks for Azure administrators
 
-### Plan virtual networks
+### Configure Virtual Networks
+
+Plan virtual networks
+
+ - Logical isolocation of the Azure cloud resources
+ - Can use to provision and manage virtual private networks(VPN)
+ - Each virtual network has its own CIDR and can be linked to other virtual networks and on prem networks
+ - Can link VPN to on prem to create a hybrid when CIDR do not overlap
+ - Can control the DNS server settings for VPNs and segmentation of VPNs to subnets
+
+Subnets
+
+ - Logical divisions within VPN
+ - Subnets contains a range of IP addresses that fall with in VPN CIDR
+ - Address range for a subnet must be unique within VPN CIDR
+ - Subnets can't overlap in Same VPN
+ - Reserved addresses
+   - 192.168.1.0 - Identifies the VPN
+   - 192.168.1.1 - Default gateway
+   - 192.168.1.2 / 192.168.1.3 - DNS IP
+   - 192.168.1.255 - Broadcast address
+  
+Create VPN
+
+ - Plan to use an IP address space that is not already in use in your organisation
+   - Address space for VPN can be either on prem or cloud but not bot
+   - Once created IP address space cannot be changed 
+ - Define at least one subnet
 
 ### Configure network security groups
 
