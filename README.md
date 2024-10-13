@@ -503,4 +503,28 @@ Create azure policies
  1. Create policy definitions - Condition to evaluate and the actions to perform when met.Can create or choose from built in. 
  2. Create an initiative definition - Set of policy definitions that help you track resources complience state.Can create or choose from built in. 
  3. Scope the initiative definition - How initiative definitions are applied to resources. Can limit the scope of an initiative definition of specific management group, suscription or resource group
- 4. Determine compliance - Can evaluate the state of resources. 
+ 4. Determine compliance - Can evaluate the state of resources.
+
+## AZ-104 : Configure and manage virtual networks for Azure administrators
+
+### Plan virtual networks
+
+### Configure network security groups
+
+### Configure Azure Virtual Network peering
+
+### Configure network routing and endpoints
+
+### Configure Azure Load Balancer
+
+### Configure Azure Application Gateway
+
+### Design and IP addressing schema for your Azure deployment
+
+### Distribute your services across Azure virtual networks and integrate them by using Virtual network peering
+
+### Host your domain on Azure DNS
+
+### Manage and control traffic flow in your Azure deployment with routes
+
+### Improve application scalability and resiliency by using Azure Load Balancer
