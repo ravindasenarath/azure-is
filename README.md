@@ -538,6 +538,24 @@ Create VPN
 
 ### Configure network security groups
 
+ - Define security rules to controlt traffic
+ - Allow or Deny inbound/outbound traffic
+ - Associated with a subnet or network interface
+ - Can be used multiple times
+ - DMZ(Demilitariazed zone) - act as a buffer between resource within virtual network and the internet
+   - Restrict traffic flow to all machines that reside within the subnet
+   - Each subnet can have a maximum of one associated network security group
+ - By default `DenyAllInbound` and `AllowInternetOutbound`
+ - Available settings
+   - Name
+   - Priority ( low priority, high presedence )
+   - Port
+   - Protocol
+   - Source
+   - Destination
+   - Action
+    
+
 ### Configure Azure Virtual Network peering
 
 ### Configure network routing and endpoints
