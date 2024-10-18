@@ -554,7 +554,9 @@ Create VPN
    - Source
    - Destination
    - Action
-    
+  - Inbound traffic - Associated network security groups rules first then associated network interface
+  - Outbound traffic - NI first then assciated security groups
+  - Application security groups(Logically group your virtual machines by workload)
 
 ### Configure Azure Virtual Network peering
 
