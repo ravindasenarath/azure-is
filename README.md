@@ -560,6 +560,28 @@ Create VPN
 
 ### Configure Azure Virtual Network peering
 
+ - Connect virtual networks in the same or different regions
+
+![network peering](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-vnet-peering/media/network-peering-5beae28a.png)
+
+ - Regional virtual network peering - In same region
+ - Global virtual network peering - In different regions
+ - Global peering in different Azure Government cloud regions ins't permitted
+ - Traffic between networks is private(No public internet, gateways etc)
+ - Use Azure infrastrucuture so low latency, high bandwidth
+ - Azure VPN Gateway - Used as a transit point
+
+![VPN gateway](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-vnet-peering/media/gateway-transit-173a51a0.png)
+
+ - One gateway per virtual network
+ - Support both regional and global peering
+ - With VPN gateway transit virtual network can communicate to resources outside peering
+   - Use site-to-site VPN to connect on prem
+   - Use vnet-to-vnet to another virtual network
+   - Use a point-to-site VPN to connect to a client
+ - Allow share gateway and get access to resources ( No eed VPN gateway in peer virtual network )
+ - Apply serucity groups in virtual network  
+
 ### Configure network routing and endpoints
 
 ### Configure Azure Load Balancer
