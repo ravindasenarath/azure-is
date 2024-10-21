@@ -580,7 +580,11 @@ Create VPN
    - Use vnet-to-vnet to another virtual network
    - Use a point-to-site VPN to connect to a client
  - Allow share gateway and get access to resources ( No eed VPN gateway in peer virtual network )
- - Apply serucity groups in virtual network  
+ - Apply serucity groups in virtual network
+ - Extend peering
+   - Hub and spoke networks - Hub host infrastructure components like NVA or VPN gateway
+   - User defined routes - Next hope in user defined route to be IP address of a virtual machine in peering network or a VPN gateway
+   - Service chaning - Used to direct traffic from one virtual network to a virtual applience or gateway.
 
 ### Configure network routing and endpoints
 
