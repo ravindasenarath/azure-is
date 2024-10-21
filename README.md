@@ -588,6 +588,34 @@ Create VPN
 
 ### Configure network routing and endpoints
 
+System routes
+
+ - Used to direct network traffic between VMs, on prem networks and internet
+ - Information recorded in a route table
+ - Control traffic for VMs(Between VMs in same subnet, VMs in different subnets in same VN, VM to internet)
+ - Route table contains set of rules(routes)
+ - Route tables record information about the system routes, where the tables are associated to subnets
+ - Each packet leaving a subnet is handled based on the associated route table
+ - Packets matched to route using destination(IP, VN gateway, virtual appliance, internet)
+ - If maching route not found packet is dropped
+
+![Route table](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-network-routing-endpoints/media/system-routes-08992506.png)
+
+User defined routes(UDR)
+
+ - Control network traffic by defning routes that specify the next hop of the traffic flow
+ - Next hop can be
+   - Virtual network gateway
+   - Virtual Network
+   - Internet
+   - Network virtual appliance(NVA)
+ - Similar to system routes, UDRs also access route tables.
+ - Each route table can be associated to multiple subnets.
+ - Each subnet can be associated to one route table only.
+ - There are no charges for creating route tables in Microsoft Azure.
+
+![UDR](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-network-routing-endpoints/media/user-defined-routes-2417e693.png)
+
 ### Configure Azure Load Balancer
 
 ### Configure Azure Application Gateway
