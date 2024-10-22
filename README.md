@@ -616,6 +616,25 @@ User defined routes(UDR)
 
 ![UDR](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-network-routing-endpoints/media/user-defined-routes-2417e693.png)
 
+Service endpoint
+
+ - Allows to access the services without the ned for reserved public IP addresses
+ - Extend virtual network identify to Azure services to secure resources
+ - Secure Azure service resources to VN by network rules
+ - Can remove public internet access to resources
+ - Configured though the subnets.
+ - Provide optimal routing ( forced-tunelling )
+
+![Service endpoint](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-network-routing-endpoints/media/service-endpoint-addresses-a027197f.png)
+
+Private Link
+
+ - Provide private connectivity from a VN to Azure Paas, Customer owned or MS parter services.
+ - Keep all traffic on MS global network. No public internet access
+ - Privately deliver own services to custoemr in VNs
+
+![Private Link](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-network-routing-endpoints/media/private-links-602b4a62.png)
+
 ### Configure Azure Load Balancer
 
 ### Configure Azure Application Gateway
