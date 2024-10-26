@@ -616,9 +616,9 @@ User defined routes(UDR)
 
 ![UDR](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-network-routing-endpoints/media/user-defined-routes-2417e693.png)
 
-Service endpoint
+Service endpoint(virtual network endpoints)
 
- - Allows to access the services without the ned for reserved public IP addresses
+ - Allows to access the services without the need for reserved public IP addresses
  - Extend virtual network identify to Azure services to secure resources
  - Secure Azure service resources to VN by network rules
  - Can remove public internet access to resources
@@ -636,6 +636,36 @@ Private Link
 ![Private Link](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-network-routing-endpoints/media/private-links-602b4a62.png)
 
 ### Configure Azure Load Balancer
+
+![Load balancer](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-azure-load-balancer/media/load-balancer-4caf947b.png)
+
+ - Can be used for inboud or outbound
+ - Can be public or internal or both
+ - Things to configure
+   - Front-end IP configuration - Public or internal ip LB responds to
+   - Back-end pools - Services or resources
+   - Health probes - Ensure backend are healthy
+   - Load-balancing rules - How traffic is distributed
+
+![Internal LB](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-azure-load-balancer/media/internal-load-balancer-5ae85589.png)
+
+- Stock Keeping Unit (SKU)
+  - Basic - Upto 300 pools
+  - Standard - Superset of basic load balancer. Expanded and more granular feature set than basic SKU, Upto 1000 pools
+  - Gateway - High performance and availability
+ 
+![SKU features](https://github.com/user-attachments/assets/33d1c159-0017-4e96-b9f9-20db14b143c9)
+
+ - Health Probes
+    - HTTP(every 15s, if respond within 31s with 200OK) or TCP(if specified listener exists)
+    - Port : Backend port
+    - URI : URI to request health status
+    - Interval : Default 15s
+    - Unhealthy threshold : No of failures to consider unhealthy
+
+ - Load balancing rules
+   - Session persistence - None(Any can handle), Client IP(Successive from same ip goes to same backend), Client IP and protocol
+   - Load balancing rules can be used in combination with NAT rules 
 
 ### Configure Azure Application Gateway
 
