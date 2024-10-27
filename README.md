@@ -669,6 +669,38 @@ Private Link
 
 ### Configure Azure Application Gateway
 
+ - Load balancer for web traffic
+
+![Application Gateway](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-azure-application-gateway/media/application-gateway-cb3392f4.png)
+
+ - Application layer routing - Route based on the URL of request
+ - Round robin load balancing - Use RR algorithem
+ - Session stickiness
+ - Protocols - HTTP/HTTPS/HTTP/2 or Websocket
+ - Firewall protection
+ - Encryption
+ - Load autoscaling
+
+ - Methods of routing
+   - Path based routing - different url paths
+   - Multi site routing - More than one web application on same application gateway instance
+ - Can redirect traffic
+ - Rewrite HTTP headers
+ - Custom error pages
+
+![Path based routing](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-azure-application-gateway/media/path-based-routing-15bcef5f.png)
+
+![Multi site routing](https://learn.microsoft.com/en-gb/training/wwl-azure/configure-azure-application-gateway/media/site-based-routing-e686b605.png)
+
+Application Gateway components
+
+ - Front-end IP address
+ - Web Application Firewall
+ - Listeners
+ - Routing rules - A rule specifies how to interpret the hostname and path elements in the URL of a request. A routing rule also has an associated set of HTTP settings. These HTTP settings indicate whether (and how) traffic is encrypted between Application Gateway and the back-end servers. Other configuration information includes protocol, session stickiness, connection draining, request timeout period, and health probes.
+ - Back-end pools
+ - Health probes - When the server returns an HTTP response with a status code between 200 and 399, the server is considered healthy.
+
 ### Design and IP addressing schema for your Azure deployment
 
 ### Distribute your services across Azure virtual networks and integrate them by using Virtual network peering
