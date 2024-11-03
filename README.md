@@ -709,6 +709,39 @@ Application Gateway components
    - 192.168.0.0 to 192.168.255.255 
  - Smallest subnet use /29 mask - 8 ip addresses
  - Largest subnet use /3 mask - 1073741824 addresses
+ - Types of IP addresses
+   - Public - For Public facing services
+   - Private
+ - Allocation methods
+   - Dynamic - Assing for the lifespan of the resource. Default method.
+   - Static - Static allocation
+ - SKUs for public IP
+   - Basic
+   - Standard
+  
+Both have by default
+ - Inbound originated flow idle timeout 4 min, adjustable upto 30min
+ - Fixed outbound idle timeout of 4min
+  
+Basic SKU
+
+ - Available for static or dynamic allocation
+ - Are open, NSG are recommended
+ - Available for inbound only traffic
+ - Available when using instance meta data service (IMDS)
+ - Don't support Availability Zones
+ - Don't support routing preferences
+
+Standard SKU
+
+ - Always use static allocation
+ - Always secure, thus close to inbound, Must enable by NSG
+ - Zero redundant and optional zonal
+ - Can assigned to network interfaces, Standard public LB, Applicatoin gateways or VPN gateways
+ - Can utilize routing prefreence
+ - Can used as anycast forntend IPs for cross-region LB
+
+
 
 ### Distribute your services across Azure virtual networks and integrate them by using Virtual network peering
 
