@@ -741,7 +741,25 @@ Standard SKU
  - Can utilize routing prefreence
  - Can used as anycast forntend IPs for cross-region LB
 
+Public IP address prefix
 
+ - Zone redundant or associated with a specil availability zone
+ - Can specify firewall rules for a known range of IP addrsses
+ - Use Azure Traffic Manager to balance region-specific instances
+ - Can bring own public ip from on prem via Custom address prefix
+ - Can't move between regions
+
+Private IP addresses
+
+ - Dynamic ( DHCP lease) - chnage over lifespan of resource
+ - Static ( DHCP reservatoin) - Don't change.
+ - Internet Assigned Numbers Authority(IANA) IP ranges
+    - 10.0.0.0/8
+    - 172.16.0.0/12
+    - 192.168.0.0/16
+ - For subnets first three IP's are reserved by default
+ - First and last IP addresses are also reserved
+ - .1, .2, .3 aren't visible for configurable
 
 ### Distribute your services across Azure virtual networks and integrate them by using Virtual network peering
 
