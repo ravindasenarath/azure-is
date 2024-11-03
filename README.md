@@ -703,6 +703,13 @@ Application Gateway components
 
 ### Design and IP addressing schema for your Azure deployment
 
+ - Non routable IP ranges
+   - 10.0.0.0 to 10.255.255.255
+   - 172.16.0.0 to 172.31.255.255
+   - 192.168.0.0 to 192.168.255.255 
+ - Smallest subnet use /29 mask - 8 ip addresses
+ - Largest subnet use /3 mask - 1073741824 addresses
+
 ### Distribute your services across Azure virtual networks and integrate them by using Virtual network peering
 
 ### Host your domain on Azure DNS
