@@ -703,6 +703,7 @@ Application Gateway components
 
 ### Design and IP addressing schema for your Azure deployment
 
+ - Number of possible addresses in a submet (2^n)-5
  - Non routable IP ranges
    - 10.0.0.0 to 10.255.255.255
    - 172.16.0.0 to 172.31.255.255
