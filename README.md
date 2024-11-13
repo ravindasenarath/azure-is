@@ -766,6 +766,38 @@ Private IP addresses
 
 ### Host your domain on Azure DNS
 
+ - Provide name resolution
+ - DNS record types
+    - A - Host record, maps domain or host name to IP
+    - CNAME - Canonical Name record, create an alias from one domain name to another
+    - MX - Main exchange record, maps request to mail server
+    - TXT - Text record. Use to associate text strings with a domain name.
+ - Additional types
+    - Wildcards
+    - CAA ( Certificate Authority )
+    - NS ( Name server )
+    - SOA ( Start of Authority )
+    - SPF ( Sender policy framework )
+    - SRV ( Server locations )
+  - SOA and NS records are automatically created when NCS zone is created in Azure DNS
+  - Record sets : Assign multiple resources to single record
+  - SOA and CNAME can't contain record sets
+  - Why Azure DNS
+    - Improve security
+    - Easy to use
+    - Private DNS domains
+    - Alias record sets
+  - Role based access control
+  - Activity logs
+  - Resource locking
+  - Private zones - Name resolution for VMs within a virtual network. Allow to use own custom domain names rather than azure provided ones
+  - Private DNS zones have the following benefits:
+    - DNS zones are supported as part of the Azure infrastructure, so there's no need to invest in a DNS solution.
+    - All DNS record types are supported: A, CNAME, TXT, MX, SOA, AAAA, PTR, and SRV.
+    - Host names for VMs in your virtual network are automatically maintained.
+    - Split-horizon DNS support allows the same domain name to exist in both private and public zones. It resolves to the correct one based on the originating request location.
+   - Alias record sets - Can point to an Azure resource. Support A, AAAA and CNAME
+
 ### Manage and control traffic flow in your Azure deployment with routes
 
 ### Improve application scalability and resiliency by using Azure Load Balancer
