@@ -797,6 +797,14 @@ Private IP addresses
     - Host names for VMs in your virtual network are automatically maintained.
     - Split-horizon DNS support allows the same domain name to exist in both private and public zones. It resolves to the correct one based on the originating request location.
    - Alias record sets - Can point to an Azure resource. Support A, AAAA and CNAME
+   - A record - Point to a IP address
+   - CNAME - When different domain names need to go to same website
+   - Alias records support
+     - A Traffic Manager profile
+     - Azure Content Delivery Network endpoints
+     - A public IP resource
+     - A front-door profile
+   - Alias records support A, AAAA and CNAME
 
 ### Manage and control traffic flow in your Azure deployment with routes
 
