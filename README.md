@@ -808,4 +808,13 @@ Private IP addresses
 
 ### Manage and control traffic flow in your Azure deployment with routes
 
+ - System routes
+   | Address prefix | 	Next hop type |
+   | Unique to the virtual network |	Virtual network |
+   | 0.0.0.0/0 |	Internet |
+   | 10.0.0.0/8 |	None |
+   | 172.16.0.0/12 |	None |
+   | 192.168.0.0/16 |	None |
+   | 100.64.0.0/10 |	None |
+
 ### Improve application scalability and resiliency by using Azure Load Balancer
