@@ -809,7 +809,9 @@ Private IP addresses
 ### Manage and control traffic flow in your Azure deployment with routes
 
  - System routes
+   
    | Address prefix | 	Next hop type |
+   | -------------  |  ------------  |
    | Unique to the virtual network |	Virtual network |
    | 0.0.0.0/0 |	Internet |
    | 10.0.0.0/8 |	None |
