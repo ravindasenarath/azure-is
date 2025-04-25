@@ -84,12 +84,12 @@ Sharing the responsiblity of the different aspects between the cloud provider an
  - Publid cloud - Built, controlled, maintained by a third party cloud provider
  - Hybrid cloud - Both
 
- | Public cloud | Private cloud | Hybrid cloud |
-| ------------- | ------------- |
-| No capital expenditures to scale up |	Organizations have complete control over resources and security | Provides the most flexibility |
-| Applications can be quickly provisioned and deprovisioned | Data is not collocated with other organizations’ data | Organizations determine where to run their applications |
-| Organizations pay only for what they use | Hardware must be purchased for startup and maintenance | Organizations control security, compliance, or legal requirements |
-| Organizations don’t have complete control over resources and security | Organizations are responsible for hardware maintenance and updates | |
+| Public Cloud               | Private Cloud                              | Hybrid Cloud                            |
+|----------------------------|-------------------------------------------|------------------------------------------|
+| No capital expenditures    | Complete control over resources/security  | Maximum flexibility                      |
+| Quick app provisioning     | Data isolation (no collocation)           | Choose where apps run                    |
+| Pay-as-you-go pricing      | Must purchase/maintain hardware           | Control security/compliance requirements |
+| Limited resource control   | Responsible for hardware updates          |                                          |
 
  - Multi-cloud - Use multiple cloud providers
  - Azure Arc - Set of technologies that helps to manage cloud environment
