@@ -139,6 +139,18 @@ Sharing the responsiblity of the different aspects between the cloud provider an
 
 ##### Describe cloud service types
 
+###### Infrastructure as a Service ( IaaS )
+
+Cloud provider is responsible for maintaining the hardware, network connectivity (to the internet), and physical security. You’re responsible for everything else.
+
+###### Platform as a Service ( PaaS )
+
+Cloud provider maintains the physical infrastructure, physical security, and connection to the internet. They also maintain the operating systems, middleware, development tools, and business intelligence services that make up a cloud solution. In a PaaS scenario, you don't have to worry about the licensing or patching for operating systems and databases.
+
+###### Software as a Service ( SaaS )
+
+With SaaS, you’re essentially renting or using a fully developed application. Email, financial software, messaging applications, and connectivity software are all common examples of a SaaS implementation.
+
 #### Describe Azure architecture and services
 
 ##### Describe the core architectural components of Azure
