@@ -68,6 +68,36 @@
 
 ##### Describe cloud computing
 
+###### What is cloud computing
+
+Cloud computing is the delivery of computing services over the internet. Computing services include common IT infrastructure such as virtual machines, storage, databases, and networking. Cloud services also expand the traditional IT offerings to include things like Internet of Things (IoT), machine learning (ML), and artificial intelligence (AI).
+
+###### Describe the shared responsibility model
+
+Sharing the responsiblity of the different aspects between the cloud provider and the consumer. 
+
+![Shared Responsibility Model](https://learn.microsoft.com/en-us/training/wwl-azure/describe-cloud-compute/media/shared-responsibility-b3829bfe.svg)
+
+###### Define cloud models
+
+ - Private cloud - Dedicated datacenter offsite
+ - Publid cloud - Built, controlled, maintained by a third party cloud provider
+ - Hybrid cloud - Both
+
+ | Public cloud | Private cloud | Hybrid cloud |
+| ------------- | ------------- |
+| No capital expenditures to scale up |	Organizations have complete control over resources and security | Provides the most flexibility |
+| Applications can be quickly provisioned and deprovisioned | Data is not collocated with other organizations’ data | Organizations determine where to run their applications |
+| Organizations pay only for what they use | Hardware must be purchased for startup and maintenance | Organizations control security, compliance, or legal requirements |
+| Organizations don’t have complete control over resources and security | Organizations are responsible for hardware maintenance and updates | |
+
+ - Multi-cloud - Use multiple cloud providers
+ - Azure Arc - Set of technologies that helps to manage cloud environment
+
+###### Describe the consumption-based model
+
+ - Only pay OpEx ( No CapEx )
+
 ##### Describe the benefits of using cloud services
 
 ##### Describe cloud service types
