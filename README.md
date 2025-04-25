@@ -98,7 +98,44 @@ Sharing the responsiblity of the different aspects between the cloud provider an
 
  - Only pay OpEx ( No CapEx )
 
-##### Describe the benefits of using cloud services
+##### Benefits of using cloud services
+
+###### Benefits of high availability and scalability in the cloud
+
+ - High availability
+ - Scalability
+ - Vertical scaling
+ - Horizontal scaling
+
+###### Benefits of reliability and predictability in the cloud
+
+ - Reliability - Ability to recover from failtures and continue to function
+ - Predictability
+    - Performance - Manage resources required to deliver service
+    - Cost - Track resources, monitor to make sure only use what is required
+
+###### Benefits of security and governance in the cloud
+
+  - Governance & Compliance in the Cloud
+     - Standardized Templates: Ensure deployed resources meet corporate/government standards.
+     - Auto-Updates: Adjust resources to new compliance standards as regulations change.
+     - Cloud Auditing: Identifies non-compliant resources and suggests fixes.
+     - Automated Patches: SaaS/PaaS models handle updates, reducing security risks.
+
+  - Security Flexibility
+     - IaaS: Offers maximum control (manage OS, software, patches yourself).
+     - PaaS/SaaS: Providers handle patches/maintenance automatically.
+     - DDoS Protection: Cloud providers are equipped to mitigate attacks, enhancing network security.
+
+  - Best Practices
+     -Early Governance Setup: Keeps cloud environments secure, compliant, and manageable long-term.
+
+###### Benefits of manageability in the cloud
+
+  - Automatically scale resource deployment based on need.
+  - Deploy resources based on a preconfigured template, removing the need for manual configuration.
+  - Monitor the health of resources and automatically replace failing resources.
+  - Receive automatic alerts based on configured metrics, so you’re aware of performance in real time.
 
 ##### Describe cloud service types
 
