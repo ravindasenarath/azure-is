@@ -155,6 +155,33 @@ With SaaS, you’re essentially renting or using a fully developed application. 
 
 ##### Describe the core architectural components of Azure
 
+###### Azure physical infrastructure
+
+Regions - Geographical area on the planet that contains at least one, but potentially multiple datacenters that are nearby and networked together with a low-latency network. Azure intelligently assigns and controls the resources within each region to ensure workloads are appropriately balanced.
+
+Availability Zones - Physically separate datacenters within an Azure region. Each availability zone is made up of one or more datacenters equipped with independent power, cooling, and networking. An availability zone is set up to be an isolation boundary. If one zone goes down, the other continues working. Availability zones are connected through high-speed, private fiber-optic networks.
+
+Region pairs - Paired region to replicate resources in case of a natual disaster etc.
+
+Sovereign Regions - Regions isolated from the main instance of Azure for legal or compliance purposes.
+
+###### Azure management infrastructure
+
+ - Azure subscriptions - Subscriptions are a unit of management, billing, and scale.
+
+###### Azure management infrastructure
+
+ - Resource - Basic building block of Azure. Anything you create, provision, deploy, etc. is a resource.
+ - Resource group - provide a convenient way to group resources together
+ - Subscription - Unit of management, billing, and scale
+    - Billing boundary - Determine how account is billed
+    - Access control boundry - To reflect diffrent organisational structures.
+ - Management groups - Level of scope above subscriptions
+    - Highest groups supported is 10,000
+    - Six levels of depth
+    - Each management group and subscription can support only one parent
+![Heirarchy](https://learn.microsoft.com/en-us/training/wwl-azure/describe-core-architectural-components-of-azure/media/management-groups-subscriptions-dfd5a108-60f31f5a.png)
+
 ##### Describe Azure compute and networking services
 
 ##### Describe Azure storage services
