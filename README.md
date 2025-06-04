@@ -184,6 +184,130 @@ Sovereign Regions - Regions isolated from the main instance of Azure for legal o
 
 ##### Describe Azure compute and networking services
 
+###### Virtual Machines
+  - What is Virtual Machines
+    - Total control over the OS
+    - Ability to run custom software
+    - Custom hosting configurations
+  - Virtual Machine Scale sets
+    - Create and manage a group of identical load-balanced VMs
+  - Virtual Machine availability sets
+    - Ensure VM's stagger updates and have varied power and network preventing losing VM's with network or power failure
+    - Update domain - Apply updates while knowing only one update domain grouping is offline at a time
+    - Fault domain - Group VMs by common power source and network switch. Default slipt VMs across three fault domains.
+
+##### Azure Containers
+  - Virtualization environments
+  - Lightweight and designed to scale
+  - Azure container instances : PaaS service
+  - Azure container Apps : Similar to container instances + ability to incorporate load balancing and scaling
+  - AKS(Azure Kubernetes Service) : Manged Kubernetes service
+
+##### Azure functions
+  - Event driven serverless compute option
+  - Even driven, short ( within seconds or less )
+  - Charged for CPU time
+  - Can be stateful(Durable Functions) or stateless
+
+##### App hosting options: Azure App Service
+  - webapps, mobile back-ends, RESTful API's
+  - Automatic scaling and high availability
+  - Linux / Windows
+  - Automated deployment from GitHub, Azure DevOps
+  - Support .NET, .NET core, Java, Ruby, Node.js, PHO or Python
+  - Handles infrastructure decisions in hosting web accessible apps
+    - Deployment and management
+    - Endpoints can be secured
+    - Scale with traffic
+    - Built in load balancing and traffic manager provide high availbility
+
+##### Asure virtual networking
+  - Isolation and segmentation : Created isolated virtual networks. Allocate parts of ip addresses to subnet
+  - Internet communication : Assign a public IP to azure resource or put resource behind a load balancer
+  - Communicate between azure resources
+      - Virtual networks can connect to other resources
+      - Service endpoints can connect to other azure resource types 
+  - Communicate with on prem resources
+      - Point-to-point : Coputer outside org back into corporate network
+      - Site-to-site : Link on-prem VPN device or gateway to Azure VPN gateway in virtual network.
+      - Azure ExpreseRoute : Dedicated private connectivity(Not over internet)
+  - Route netowrk traffic
+      - Route tables : Define rules
+      - Border Gateway Protocol(BGP) : Works with Azure VPN gateways, Azure Route Server or ExpressRoute go connect on prem to Azure virtual network 
+  - Filter network traffic
+      - Network security gruops : Mange inbound/outbound rules
+      - Network virtual appliances : Specialized VMs with hardened network appliance.
+  - Connect Virtual networks
+  - Virtual network peering: connect two network VN's, Use Azure intranet. Use defined routes(UDR) allow to control routing tables between routes.
+
+##### Virtual Private Networking ( VPN )
+
+###### What is VPN
+  - Use an encrypted tunnel
+  - Connect two or more trusted networks over untrusted network
+  - Traffic is encrypted
+
+###### VPN Gateways
+
+  - Deployed in dedicated subnet of the virtual network end enable
+    - Connect on-prem datacenters to virtual networks through a site-to-site connection
+    - Connect individual devices to virtual networks through a point-to-point connection
+    - Connect virtual networks to other virtual networks
+
+  - Features of VPN gateway
+    - Data transfer is encerypted in a private tunnel
+    - Only one gateway per virtual network
+    - One gateway can connect to multiple locations
+
+  - Types of VPN Gateway
+    - Policy based VPN - Sepcify statically the IP address of packets that should be encrypted
+    - Route based VPN - IP sec tunnels are modeled as a network interface or virtual tunnel. Decide which tunnel to use for each packet. Preferred connection method for on-prem devices. More resilient to topology changes.
+
+  - Use Route based VPN gateway for
+    - Connections between VPNs
+    - Point to point connections
+    - Multisite connections
+    - Coesistence with Azure ExpreeRoute gateway
+
+  - High available scenarios
+    - Active/standby : Two connections, one stand by which activate on disruption. Connections are interrupted during the failover(few seconds for planned and within 90 for unplanned disruptions)
+    - Actuve/active : High availability
+    - ExpressRoute failover : Configure a VPn gateway as a secure failover path for ExpressRoute connecitons
+    - Zone-redundant gateways : Deploy VPN gateways and ExpressROute gateways in  a zero redundant configuration.
+
+###### Azure ExpressRoute
+
+  - Extend on-prem network to MS cloud via a private connection
+  - Connection called "Express circuit"
+  - Features and benefits using ExpressRoute between Azure and on-prem
+    - Connectivity to MS cloud services across all regions in the geopolitical region
+    - Global connectivity to MS services across all regions wih the ExpressRoute Global Reach
+    - Dynamic routing between your network and MS via BOrder Gateway Protocol(BGP)
+  - ExpressRoute enables direct access to the following services in all regions
+    - MS Office 365
+    - MS Dynamics 365
+    - Azure compute services
+    - Azure cloud services
+  - Global connectivity - ExpressRoute Global Reach to exchange data across on-prem sites by connecting ExpressRoute circuits
+    - Dynamic routing - GGP protocol is used.
+    - Built in redundency - Can use multiple circuits
+  - ExpressRoute connectivity models
+    - CloudExchange colocation -
+    - Point-to-point Ethernet connection -
+    - Any-toany connection -
+    - Directly from ExressRoute sites - Connect directly into MS global network at a peering location. Express route Direct provides 100 Gbps or 10 Gbps connectivity with Active/Active support
+
+###### Azure DNS
+
+ - Reliability and performance : Hosted on Azure's global network of DNS name servers, use anycast for performance
+ - Security : Based on Azure resource manager
+   - Azure role-based access control(Azure RBAC) to control who as access to specific actions for organisation
+   - Activity logs to monitor how a user in organisation modified a resource or find errors when troubleshooting
+   - Resource locking to lock subscription, resource group, or resource. Locking prevent accidental deleting or modifying critical resources
+ - Easy to Use : Integrated in Azure portal and use same credentials, support contact and billing as azure services.
+ - Customize virtual networks : Support private DNS domains. Allow to use your own domain names in private virtual networks, rather than stuck with azure provided names.
+ - Alias records : Can use to refer to Azure resoruce. If IP address of underlying resource change. Alias points to service instance, service instance associate with and IP address
+
 ##### Describe Azure storage services
 
 ##### Describe Azure identity, access, and security
